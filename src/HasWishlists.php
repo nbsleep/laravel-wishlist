@@ -193,7 +193,7 @@ trait HasWishlists
         if (! $items || empty($items)) {
             return collect([]);
         }
-
+        $lists = [];
         foreach ($items as $item) {
             $lists[$item->collection_name][] = $item->model_id;
         }
